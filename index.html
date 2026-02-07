@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Surprise — Anniversaire & Saint‑Valentin</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="overlay" id="overlay">
+    <div class="card" role="dialog" aria-labelledby="surpriseTitle">
+      <h1 id="surpriseTitle">Surprise !</h1>
+      <p>Un cadeau pour toi, Kimora — ouvre quand tu es prête.</p>
+      <button id="startBtn" class="btn" aria-label="Commencer la surprise">Commencer</button>
+    </div>
+  </div>
+
+  <div id="fallingHearts" class="falling-hearts" aria-hidden="true"></div>
+
+  <main id="main" class="hidden">
+    <section id="anniv" class="panel hidden-panel" aria-labelledby="annivTitle">
+      <h2 id="annivTitle" class="title">Joyeux anniversaire</h2>
+      <div id="birthdayAnim" class="birthday-anim" aria-hidden="true"></div>
+      <p id="annivText" class="touching" aria-live="polite"></p>
+      <div id="choice" class="choice hidden">
+          <p class="choice-q">Tu crois toujours en moi, Kimora ?</p>
+        <div class="choice-buttons" id="choiceButtons">
+          <button id="choiceYes" class="btn">Oui</button>
+          <button id="choiceNo" class="btn outline">Non</button>
+        </div>
+      </div>
+      <div id="noResponseMsg" class="no-msg hidden">moi je ne t'ai pas oublié mais t'inquiète pas pour moi</div>
+    </section>
+
+    <section id="valentine" class="panel hidden-panel" aria-labelledby="valTitle">
+      <h2 id="valTitle" class="title">Bonne Saint‑Valentin</h2>
+      <div id="hearts" class="hearts" aria-hidden="true"></div>
+      <p id="valText" class="romantic" aria-live="polite"></p>
+      <div class="controls">
+        <button id="loveBtn" class="btn outline" aria-pressed="false">Révéler mon amour</button>
+        <button id="replayBtn" class="btn" aria-label="Rejouer la surprise">Rejouer</button>
+      </div>
+      <div id="loveMsg" class="love-msg hidden">Kimora, je t'aime plus que tout — tu es le sommet de ma romance. ❤️</div>
+
+      <div id="timeQuestion" class="time-question hidden" aria-live="polite">
+        <p class="time-q">Tu sais combien de temps nous sommes ensemble ? ⏳</p>
+        <div class="time-controls">
+          <button id="timeYes" class="btn">Oui</button>
+          <button id="timeNo" class="btn outline">Non</button>
+        </div>
+        <div id="timeResp" class="time-response hidden">Moi-même je n'en sais trop rien, c'est pas long encore — on a beaucoup à vivre 🎉❤️</div>
+      </div>
+    </section> 
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
